@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Shams Sujon | Freelance Frontend Developer</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet" />
+	<!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+</head>
+
+<body class="w-full h-full relative text-primary-dark bg-gray-50 overflow-x-hidden">
+	<!-- Navbar -->
+	<div x-data="{ open: false }" class="
+				navbar
+				transform
+				fixed
+				top-0
+				left-0
+				right-0
+				py-6
+				w-full
+				z-50
+				backdrop-filter backdrop-blur-lg
+				bg-gray-50/70
+			">
+		<div class="container flex flex-col lg:flex-row justify-between items-center">
+			<div class="flex justify-between items-center w-full">
+				<!-- Logo -->
+				<a href="#intro" class="logo inline-flex items-center gap-4">
+					<img src="./assets/img/logo.svg" alt="" class="w-10 lg:w-11" />
+					<span class="
+								font-display
+								text-xl
+								lg:text-2xl
+								text-transparent
+								bg-gradient-to-t
+								from-primary-dark
+								to-secondary
+								bg-clip-text
+							">Shams Sujon</span>
+				</a>
+
+				<!-- Navigation toggler -->
+				<button @click.outside="open = false" @click="open = !open" :class="{'menu-opened': open, '': !open}"
+					class="
+							nav-toggler
+							w-8
+							h-7
+							relative
+							flex
+							justify-center
+							items-center
+							lg:hidden
+						" type="button">
+					<span class="
+								inline-block
+								bg-primary
+								absolute
+								w-6
+								h-1
+								top-0
+								right-0
+								transform
+								transition-all
+								origin-top-right
+								ease-in-out
+								rounded-lg
+							"></span>
+					<span class="
+								inline-block
+								bg-primary
+								absolute
+								w-full
+								h-1
+								top-1/2
+								transform
+								-translate-y-1/2
+								right-0
+								transition-all
+								origin-center
+								ease-in-out
+								rounded-lg
+							"></span>
+					<span class="
+								inline-block
+								bg-primary
+								absolute
+								w-5
+								h-1
+								bottom-0
+								right-0
+								transform
+								transition-all
+								origin-bottom-right
+								ease-in-out
+								rounded-lg
+							"></span>
+				</button>
+			</div>
+
+			<!-- Navigation -->
+			<div :class="{'block': open, 'hidden': !open}"
+				class="nav-container hidden lg:block w-full lg:w-auto pt-6 lg:pt-0">
+				<ul class="
+							navigation
+							flex flex-col
+							lg:flex-row
+							items-center
+							lg:items-end
+							gap-4
+							lg:gap-8
+							-mr-2
+						">
+					<li>
+						<a href="#services" class="
+									inline-block
+									font-bold
+									uppercase
+									transition-all
+									p-2
+									hover:text-secondary
+								">Services</a>
+					</li>
+					<li>
+						<a href="#works" class="
+									inline-block
+									font-bold
+									uppercase
+									transition-all
+									p-2
+									hover:text-secondary
+								">Works</a>
+					</li>
+					<li>
+						<a href="#contact" class="
+									inline-block
+									font-bold
+									uppercase
+									transition-all
+									p-2
+									hover:text-secondary
+								">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero section -->
+	<section id="intro" class="hero-section py-10 md:py-16 lg:py-20">
+		<div class="container grid md:grid-cols-2 items-center gap-8 md:gap-0 lg:gap-20">
+			<div class="hero-img order-2 md:order-1">
+				<img src="./assets/img/portrait.png" alt="" class="w-full max-w-full" />
+			</div>
+			<div class="hero-content order1 md:order-2">
+				<h2 class="text-2xl lg:text-3xl mb-5 lg:mb-6 hidden md:block">
+					Hi, I'm
+					<span class="
+								text-transparent
+								bg-gradient-to-t
+								from-primary-dark
+								to-secondary
+								bg-clip-text
+							">Shams Sujon.</span>
+				</h2>
+				<h1 class="
+							font-bold
+							mb-6
+							text-5xl
+							md:text-6xl
+							lg:text-7xl
+							leading-tight
+							md:leading-tight
+							lg:leading-tight
+						">
+					Freelance Frontend Developer
+				</h1>
+				<div class="btns flex items-start mt-8 lg:mt-10 gap-4 md:gap-10 ml-2">
+					<a target="_blank" href="https://www.linkedin.com/in/shamsulsujon/" class="btn px-4 py-2 -ml-4">
+						<img src="./assets/img/brand-logos/linkedin.svg" alt="" class="w-8 h-8" />
+					</a>
+					<a target="_blank" href="https://www.instagram.com/shams.sujon/" class="btn px-4 py-2 -ml-4">
+						<img src="./assets/img/brand-logos/instagram.svg" alt="" class="w-8 h-8" />
+					</a>
+					<a target="_blank" href="https://github.com/shamssujon" class="btn px-4 py-2 -ml-4">
+						<img src="./assets/img/brand-logos/github.svg" alt="" class="w-8 h-8" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services section -->
+	<section id="services" class="services py-10 md:py-16 lg:py-20 overflow-hidden">
+		<div class="container mb-16 md:mb-20">
+			<h2 class="text-4xl lg:text-5xl font-bold">What I do _</h2>
+		</div>
+		<div class="container">
+			<div class="service-list swiper-container overflow-visible pb-12 lg:pb-0">
+				<div class="swiper-wrapper">
+					<!-- Frontend -->
+					<div class="swiper-slide h-auto">
+						<div class="
+									service-card
+									bg-white
+									p-6
+									md:p-8
+									shadow-lg
+									text-lg
+									font-medium
+									rounded-lg
+									h-full
+								">
+							<div class="service-icon">
+								<img class="w-16 lg:w-20 h-16 lg:h-20 mb-8" src="assets/img/services/code.svg" alt="" />
+							</div>
+							<h4 class="font-semibold text-lg lg:text-xl mb-3">
+								Frontend Development
+							</h4>
+							<ul class="list-disc pl-4 text-base flex flex-col gap-2 mt-4">
+								<li>Build HTML templates for marketplace like ThemeForest.</li>
+								<li>Convert PSD/XD/Figma files to HTML/CSS/JS.</li>
+								<li>
+									Build single or multi-page static websites such as online
+									resumes, portfolio, blog, informational websites, landing
+									page, etc.
+								</li>
+								<li>Build and customize Wordpress and Shopify themes</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Design -->
+					<div class="swiper-slide h-auto">
+						<div class="
+									service-card
+									bg-white
+									p-6
+									md:p-8
+									shadow-lg
+									text-lg
+									font-medium
+									rounded-lg
+									h-full
+								">
+							<div class="service-icon">
+								<img class="w-16 lg:w-20 h-16 lg:h-20 mb-8" src="assets/img/services/pen.svg" alt="" />
+							</div>
+							<h4 class="font-semibold text-lg lg:text-xl mb-3">
+								Web UI/UX Design
+							</h4>
+							<ul class="list-disc pl-4 text-base flex flex-col gap-2 mt-4">
+								<li>Web page design</li>
+								<li>Theme design (WordPress, Shopify, etc.)</li>
+								<li>App design</li>
+								<li>UX wireframing</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="swiper-slide h-auto">
+						<div class="
+									service-card
+									bg-white
+									p-6
+									md:p-8
+									shadow-lg
+									text-lg
+									font-medium
+									rounded-lg
+									h-full
+								">
+							<div class="service-icon">
+								<img class="w-16 lg:w-20 h-16 lg:h-20 mb-8" src="assets/img/services/gear.svg" alt="" />
+							</div>
+							<h4 class="font-semibold text-lg lg:text-xl mb-3">IT Assistant</h4>
+							<ul class="list-disc pl-4 text-base flex flex-col gap-2 mt-4">
+								<li>Domain management</li>
+								<li>Server maintenance</li>
+								<li>Google Workspace</li>
+								<li>Website Transfer</li>
+								<li>Website migration</li>
+								<li>Speed Optimization</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Tools & Technologies -->
+	<section class="tool-tech-section overflow-hidden py-10 md:py-16 lg:py-20">
+		<div class="container overflow-hidden">
+			<div class="tools flex items-center gap-14 md:gap-24">
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/html5.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/css3.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/sass.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/javascript.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/bootstrap5.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/tailwindcss.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/wordpress.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/shopify.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/photoshop.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/illustrator.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/xd.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/figma.svg" alt="" />
+				</div>
+				<div class="item flex-shrink-0">
+					<img class="w-8 h-8 md:w-14 md:h-14" src="./assets/img/tools/vscode.svg" alt="" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Works section -->
+	<section id="works" class="work-section py-10 md:py-16 lg:py-20 overflow-hidden relative">
+		<div class="container mb-16 md:mb-20 flex items-center justify-between">
+			<h2 class="text-4xl lg:text-5xl font-bold">What I've done _</h2>
+			<!-- Scrollbar desktop-->
+			<div class="
+						portfolio-scrollbar
+						bg-secondary-dark/10
+						w-4/5
+						md:w-1/3
+						h-3
+						mx-auto
+						md:mr-0
+						absolute
+						bottom-3
+						left-0
+						right-0
+						md:static
+					"></div>
+		</div>
+		<div class="container overflow-hidden mb-5 md:mb-0">
+			<div class="
+						work-list
+						swiper-container
+						relative
+						lg:max-w-3xl
+						xl:max-w-4xl
+						overflow-visible
+						md:overflow-hidden
+					">
+				<div class="swiper-wrapper">
+					<!-- CIO -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/cio.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										The CIO Institute
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, SCSS, JS, Bootstrap, Website redesign
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/ZWB2wxg" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- APPAI -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/appai.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										Appai
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, CSS, JS, Bootstrap, ThemeForest, PSD to HTML
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/SWB0Qf5" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Moho -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/moho.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										MOHO Animation
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, SCSS, Javascript, Bootstrap, PSD to Shopify
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/jWB4mKK" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Covira -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/covira.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										Covira
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, SCSS, Javascript, Bootstrap, ThemeForest, PSD to
+										HTML
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/qWB2nyN" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- On site paper -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/onsitepaper.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										OnSitePaper
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, CSS, JS, Bootstrap, XD to HTML
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/YWB9uWg" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- TPF -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/tpf.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										The Preset Factory
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, CSS, JS, Bootstrap, PSD to Shopify
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/bWB44zF" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Kopax -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/kopax.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										Kopax.
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, CSS, JS, Bootstrap, ThemeForest
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/xWB7NXl" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- KŐANGYAL -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/koangyal.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										KŐANGYAL
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, CSS, JS, Bootstrap, XD to HTML
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/2WB3MHy" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Bijoux Serendipity -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/bijouxserendipity.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										Bijoux Serendipity
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, CSS, JS, PSD to Shopify
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/ZWNw8X0" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- AA Repair -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/aarepair.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										AA Repair
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, CSS, JS, Bootstrap, PSD to HTML
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/oWB5voy" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Digita -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/digita.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										Digita
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, CSS, JS, Bootstrap, PSD to HTML, ThemeForest
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/wWNeJ0g" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- JMM -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/jmm.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										JMM Technologies
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, CSS, JS, Bootstrap, XD to HTML
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/QWB67dB" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- mac-corner -->
+					<div class="swiper-slide">
+						<div class="work-single relative group shadow-xl">
+							<div class="work-img overflow-hidden">
+								<img class="w-full group-hover:scale-105 transition-transform"
+									src="./assets/img/works/mac-corner.jpg" alt="" />
+							</div>
+							<div class="
+										work-details
+										bottom-0
+										left-0
+										w-full
+										p-4
+										md:p-8
+										bg-primary-dark/90
+										hover:bg-primary-dark
+										flex
+										items-center
+										justify-between
+										transition
+									">
+								<div class="">
+									<h4 class="font-semibold text-lg md:text-2xl text-secondary">
+										Mac-Corner
+									</h4>
+									<p class="text-xs md:text-sm text-gray-200 mt-2">
+										HTML, CSS, JS, Bootstrap, PSD to HTML
+									</p>
+								</div>
+								<div>
+									<a href="https://cutt.ly/JWNqQ6G" target="_blank" class="
+												text-primary
+												bg-secondary/50
+												block
+												w-10
+												h-10
+												flex
+												items-center
+												justify-center
+												rounded-full
+												after:content-['']
+												after:absolute
+												after:w-full
+												after:h-full
+												after:inset-0
+												group-hover:bg-secondary
+												transition-colors
+											">
+										<svg xmlns="http://www.w3.org/2000/svg" class="
+													h-6
+													w-6
+													relative
+													transition-transform
+													group-hover:-rotate-45
+												" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+												d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slider Nav -->
+				<!-- <div
+						class="
+							button-prev
+							absolute
+							top-1/2
+							transform
+							-translate-y-3/4
+							z-10
+							w-16
+							h-16
+							shadow-lg
+							bg-secondary
+							text-primary-dark
+							flex
+							items-center
+							justify-center
+							rounded-full
+							-left-20
+						"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-8 w-8"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M15 19l-7-7 7-7"
+							/>
+						</svg>
+					</div>
+					<div
+						class="
+							button-next
+							absolute
+							top-1/2
+							transform
+							-translate-y-3/4
+							z-10
+							w-16
+							h-16
+							shadow-lg
+							bg-secondary
+							text-primary-dark
+							flex
+							items-center
+							justify-center
+							rounded-full
+							-right-20
+						"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-8 w-8"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M9 5l7 7-7 7"
+							/>
+						</svg>
+					</div> -->
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonial section -->
+	<section class="testimonial-section py-10 md:py-16 lg:py-20 overflow-hidden">
+		<div class="container mb-16 md:mb-20">
+			<h2 class="text-4xl lg:text-5xl font-bold">What's people saying _</h2>
+		</div>
+		<div class="container">
+			<div class="testimonial-items swiper-container pb-12 lg:pb-0 overflow-visible">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<blockquote class="
+									bg-white
+									p-8
+									mt-3
+									shadow-lg
+									text-base
+									lg:text-lg
+									font-medium
+									rounded-lg
+									relative
+								">
+							<img src="./assets/img/quote.svg" alt=""
+								class="w-12 h-12 absolute right-3 -top-3 opacity-70" />
+							<p class="italic">
+								He is on time, communicates regularly and thinks like an end
+								user to provide all options needed. He also links all pages so
+								you can see everything. His quality for responsiveness in form
+								of HTML/CSS files is great. You will not regret.
+							</p>
+						</blockquote>
+						<div class="flex items-center gap-4 mt-8">
+							<div class="
+										w-14
+										lg:w-16
+										h-14
+										lg:h-16
+										rounded-full
+										bg-gray-100
+										overflow-hidden
+										flex-shrink-0
+									">
+								<img src="./assets/img/clients/dhaval_shah.jpg" alt=""
+									class="w-full h-full object-cover" />
+							</div>
+							<div>
+								<h6 class="font-semibold text-lg lg:text-xl">Dhaval Shah</h6>
+								<p class="text-sm text-gray-400">RoboNegotiator</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<blockquote class="
+									bg-white
+									p-8
+									mt-3
+									shadow-lg
+									text-base
+									lg:text-lg
+									font-medium
+									rounded-lg
+									relative
+								">
+							<img src="./assets/img/quote.svg" alt=""
+								class="w-12 h-12 absolute right-3 -top-3 opacity-70" />
+							<p class="italic">
+								"...He did not only deliver what was asked, but also made some
+								improvements that showed, he is not only skilled in technical
+								implementation, but also has an eye for good design. He is also
+								quick in making changes. Always friendly and well spoken..."
+							</p>
+						</blockquote>
+						<div class="flex items-center gap-4 mt-8">
+							<div class="
+										w-14
+										lg:w-16
+										h-14
+										lg:h-16
+										rounded-full
+										bg-gray-100
+										overflow-hidden
+										flex-shrink-0
+									">
+								<img src="./assets/img/clients/philipp.jpg" alt="" class="w-full h-full object-cover" />
+							</div>
+							<div>
+								<h6 class="font-semibold text-lg lg:text-xl">
+									Philipp Gassmann
+								</h6>
+								<p class="text-sm text-gray-400">
+									Kreis für natürliche Lebenshilfe e. V.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<blockquote class="
+									bg-white
+									p-8
+									mt-3
+									shadow-lg
+									text-base
+									lg:text-lg
+									font-medium
+									rounded-lg
+									relative
+								">
+							<img src="./assets/img/quote.svg" alt=""
+								class="w-12 h-12 absolute right-3 -top-3 opacity-70" />
+							<p class="italic">"...bla blabla bla tut tut..." 😤</p>
+							<br />
+							<p class="italic">
+								"...blabla bla blablabla tut tut tut blablabla bla bla blabla
+								blablabla tut tut blabla..." 🤬
+							</p>
+							<br />
+							<p>😂😂</p>
+						</blockquote>
+						<div class="flex items-center gap-4 mt-8">
+							<div class="
+										w-14
+										lg:w-16
+										h-14
+										lg:h-16
+										rounded-full
+										bg-gray-100
+										overflow-hidden
+										flex-shrink-0
+									">
+								<img src="./assets/img/clients/mom.jpg" alt="" class="w-full h-full object-cover" />
+							</div>
+							<div>
+								<h6 class="font-semibold text-lg lg:text-xl">My Mom</h6>
+								<p class="text-sm text-gray-400">Our House</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact section -->
+	<section id="contact" class="contact-section py-10 md:py-16 lg:py-20 overflow-hidden">
+		<div class="container ">
+			<h2 class="text-4xl lg:text-5xl font-bold mb-16 md:mb-20">How to knock _</h2>
+			<div class="contact-list swiper-container overflow-visible pb-12">
+				<div class="swiper-wrapper justify-between">
+					<div class="swiper-slide md:!w-auto md:!mr-0">
+						<h4 class="font-semibold text-xl mb-5">Message me on _</h4>
+
+						<div class="btns flex flex-col items-start gap-1">
+							<a target="_blank" href="https://wa.me/8801780691149?text=Hello%20Shams..."
+								class="btn px-4 py-2 -ml-4">
+								<img src="./assets/img/brand-logos/whatsapp.svg" alt="" class="w-7 h-7" />
+								<span>whatsapp</span>
+							</a>
+							<a target="_blank" href="https://m.me/the.shams.sujon/" class="btn px-4 py-2 -ml-4">
+								<img src="./assets/img/brand-logos/messenger.svg" alt="" class="w-7 h-7" />
+								<span>Messenger</span>
+							</a>
+							<a target="_blank" href="https://join.skype.com/invite/glRGEZH28T2B"
+								class="btn px-4 py-2 -ml-4">
+								<img src="./assets/img/brand-logos/skype.svg" alt="" class="w-7 h-7" />
+								<span>Skype</span>
+							</a>
+							<a target="_blank" href="mailto:sujon2762@gmail.com" class="btn px-4 py-2 -ml-4">
+								<img src="./assets/img/brand-logos/email.svg" alt="" class="w-7 h-7" />
+								<span>Email</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="swiper-slide md:!w-auto md:!mr-0">
+						<h4 class="font-semibold text-xl mb-5">Follow me on _</h4>
+
+						<div class="btns flex flex-col items-start gap-1">
+							<a target="_blank" href="https://github.com/shamssujon" class="btn px-4 py-2 -ml-4">
+								<img src="./assets/img/brand-logos/github.svg" alt="" class="w-7 h-7" />
+								<span>github</span>
+							</a>
+							<a target="_blank" href="https://www.linkedin.com/in/shamsulsujon/"
+								class="btn px-4 py-2 -ml-4">
+								<img src="./assets/img/brand-logos/linkedin.svg" alt="" class="w-7 h-7" />
+								<span>linkedin</span>
+							</a>
+							<a target="_blank" href="https://www.instagram.com/shams.sujon/"
+								class="btn px-4 py-2 -ml-4">
+								<img src="./assets/img/brand-logos/instagram.svg" alt="" class="w-7 h-7" />
+								<span>instagram</span>
+							</a>
+							<a target="_blank" href="https://www.facebook.com/the.shams.sujon/"
+								class="btn px-4 py-2 -ml-4">
+								<img src="./assets/img/brand-logos/facebook.svg" alt="" class="w-7 h-7" />
+								<span>Facebook</span>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-slide md:!w-auto md:!mr-0">
+						<h4 class="font-semibold text-xl mb-5">Hire me on _</h4>
+
+						<div class="btns flex flex-col items-start gap-1">
+							<a target="_blank" href="https://www.upwork.com/o/profiles/users/~0101b0c52a08b4411b/"
+								class="btn px-4 py-2 -ml-4">
+								<img src="./assets/img/brand-logos/upwork.svg" alt="" class="w-7 h-7" />
+								<span>upwork</span>
+							</a>
+							<a target="_blank" href="#" class="btn px-4 py-2 -ml-4 pointer-events-none opacity-50">
+								<img src="./assets/img/brand-logos/freelancer.svg" alt="" class="w-7 h-7" />
+								<span>Freelancer</span>
+							</a>
+							<a target="_blank" href="#" class="btn px-4 py-2 -ml-4 pointer-events-none opacity-50">
+								<img src="./assets/img/brand-logos/fiverr.svg" alt="" class="w-7 h-7" />
+								<span>fiverr</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer py-6 md:py-8 bg-gray-100">
+		<div class="container text-center">
+			<p>&copy; <a href="https://shamssujon.com/">Shams Sujon</a>, 2021 | All rights reserved.</p>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>

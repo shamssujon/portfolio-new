@@ -1,0 +1,143 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply font-body;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-display;
+	}
+}
+
+@layer components {
+	.btn {
+		@apply px-8 py-4 text-center rounded-lg inline-flex items-center justify-center gap-3  font-semibold transition-all uppercase relative z-auto tracking-wider leading-relaxed;
+	}
+
+	.btn:hover {
+		@apply z-10 shadow-lg;
+	}
+
+	.btn-primary {
+		@apply bg-primary text-white;
+	}
+
+	.btn-primary:hover {
+		@apply bg-primary-dark;
+	}
+
+	.btn-secondary {
+		@apply bg-secondary text-primary;
+	}
+
+	.btn-secondary:hover {
+		@apply bg-secondary-dark text-white;
+	}
+}
+
+@layer utilities {
+	.menu-opened span:first-child {
+		@apply -rotate-45 w-9;
+	}
+	.menu-opened span:last-child {
+		@apply rotate-45 w-9;
+	}
+	.menu-opened span:nth-child(2) {
+		@apply opacity-0 w-0;
+	}
+
+	.hide {
+		@apply opacity-0 invisible;
+	}
+
+	.show {
+		@apply opacity-100 visible;
+	}
+
+	.animation-duration-2s {
+		animation-duration: 2s;
+	}
+
+	.animation-duration-4s {
+		animation-duration: 4s;
+	}
+
+	.animation-duration-6s {
+		animation-duration: 6s;
+	}
+
+	.animation-duration-10s {
+		animation-duration: 10s;
+	}
+}
+
+.swiper-slide .work-single {
+	@apply pointer-events-none;
+}
+.swiper-slide.swiper-slide-active .work-single {
+	@apply pointer-events-auto;
+}
+
+.swiper-pagination {
+	@apply bg-white rounded-full flex gap-2 px-2 py-1;
+}
+
+.swiper-pagination-bullet {
+	@apply bg-primary-dark bg-opacity-20 opacity-100;
+}
+
+.swiper-pagination-bullet-active {
+	@apply bg-secondary bg-opacity-100;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+	bottom: 0;
+	left: 50%;
+	width: auto;
+	transform: translateX(-50%);
+	margin: 0;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+	@apply m-0;
+}
+.swiper-scrollbar-drag {
+	@apply rounded-none bg-secondary-dark cursor-[grab];
+}
+
+.headroom {
+	will-change: transform;
+	transition: transform 200ms linear;
+}
+.headroom--pinned {
+	transform: translateY(0%);
+}
+.headroom--not-top {
+	@apply shadow-md;
+}
+.headroom--unpinned {
+	transform: translateY(-100%);
+}
+.testimonial-items .swiper-slide {
+	height: auto;
+	@apply flex flex-col justify-between;
+}
+.testimonial-items blockquote {
+	@apply flex-1;
+}
+.swiper-pagination-lock {
+	display: none;
+}

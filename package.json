@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "alpinejs": "^3.3.2",
+    "autoprefixer": "^10.2.6",
+    "glob": "^7.1.7",
+    "headroom.js": "^0.12.0",
+    "lax.js": "^2.0.3",
+    "postcss": "^8.3.2",
+    "swiper": "^6.7.0",
+    "tailwindcss": "^2.1.4",
+    "vite": "^2.3.7"
+  }
+}
