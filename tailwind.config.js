@@ -1,6 +1,5 @@
 module.exports = {
-  mode: 'jit',
-  purge: ["./src/**/*.html", "./src/**/*.js"],
+  content: ["./src/**/*.{html,js}"],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     screens: {
@@ -34,6 +33,9 @@ module.exports = {
           DEFAULT: '#2FDF84',
           dark: '#00B871',
         }
+      },
+      aspectRatio: {
+        '4/3': '4 / 3',
       },
     },
   },
