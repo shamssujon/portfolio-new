@@ -1,6 +1,6 @@
 import Alpine from 'alpinejs'
 import Swiper from 'swiper/bundle';
-import 'swiper/swiper-bundle.css';
+import 'swiper/css/bundle';
 import Headroom from "headroom.js";
 import lax from 'lax.js';
 import '../css/style.css';
